@@ -1,13 +1,20 @@
 const { Schema, model } = require('mongoose');
-const bcrypt = require('bcrypt');
+//const bcrypt = require('bcrypt');
 //do we need a const for bio?
 
-const userSchema = new Schema(
+const bioSchema = new Schema(
     {
-        lookingfor: {
+        lookingforlove: {
             name: {type: String},
-            date: {type: Date},
-            description: {type: String, possibleValues: ['Dating','Friendship']} 
+            required: true
+        },
+        lookingforfriends: {
+            name: {type: String},
+            required: true
+        },
+        lookingforcommunity: {
+            name: {type: String},
+            required: true
         }
     }
 )
