@@ -1,6 +1,6 @@
 const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
-//const bio?
+//do we need a const for bio?
 
 const userSchema = new Schema(
     {
@@ -23,13 +23,7 @@ const userSchema = new Schema(
             type: String,
             require: true,
             unique: true
-        },
-        contacts:[
-            {
-                type: Schema.Types.ObjectID,
-                ref: 'User'         
-            },
-        ],
+        }
     },
     {
        toJSON:{
