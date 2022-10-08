@@ -5,16 +5,63 @@ const { Schema, model } = require('mongoose');
 const bioSchema = new Schema(
     {
         lookingforlove: {
-            name: {type: String},
-            required: true
+            type: String,
+            required: true,
+            possibleValues: ['yes', 'no'] 
         },
         lookingforfriends: {
-            name: {type: String},
-            required: true
+            type: String,
+            required: true,
+            possibleValues: ['yes', 'no'] 
         },
         lookingforcommunity: {
-            name: {type: String},
+            type: String,
+            required: true,
+            possibleValues: ['yes', 'no'] 
+        },
+        birthdate: {
+            type: String,
+            required: true,
+            // match: [/^[0-3]?[0-9]/[0-3]?[0-9]/(?:[0-9]{2})?[0-9]{2}$/, 'Please enter a valid Birthday']
+        },
+        gender: {
+            type: String,
+            required: true,
+            possibleValues: ['Woman', 'Man', 'Transgender', 'Non-binary/non-conforming', 'Prefer not to respond']
+        },
+        orientation: {
+            type: String,
+            required: true,
+        },
+        location: {
+            type: String,
+            required: true,
+        },
+        aboutme: {
+            type: String,
+            maxlength: 1000,
+            required: true
+        },
+        photo: {
+            type: String,
+            required: true
+        },
+        interests: {
+            type: String,
+            maxlength: 500,
+            required: true
+        },
+        selfidentify: {
+            type: String,
+            required: true,
+            possibleValues: ['yes', 'no'] 
+        },
+        disability: {
+            type: String,
+            maxlength: 500,
             required: true
         }
     }
 )
+
+module.exports = Bio;
