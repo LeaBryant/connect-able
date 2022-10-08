@@ -20,13 +20,14 @@ const bioSchema = new Schema(
             possibleValues: ['yes', 'no'] 
         },
         birthdate: {
-            type: Date,
+            type: String,
             required: true,
+            // match: [/^[0-3]?[0-9]/[0-3]?[0-9]/(?:[0-9]{2})?[0-9]{2}$/, 'Please enter a valid Birthday']
         },
         gender: {
             type: String,
             required: true,
-            possibleValues: ['Woman', 'Man', 'Transgender', 'Non-binary/non-conforming', 'Prefer not to respond'] 
+            possibleValues: ['Woman', 'Man', 'Transgender', 'Non-binary/non-conforming', 'Prefer not to respond']
         },
         orientation: {
             type: String,
