@@ -64,4 +64,4 @@ const bioSchema = new Schema(
     }
 )
 
-module.exports = Bio;
+module.exports = bioSchema;
