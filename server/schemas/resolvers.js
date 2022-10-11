@@ -1,4 +1,5 @@
 const { AuthenticationError } = require('apollo-server-express');
+const { assertType } = require('graphql');
 const { User } = require('../models');
 const { signToken } = require('../utils/auth');
 
@@ -33,6 +34,34 @@ const resolvers = {
               }
               const token = signToken(user);
               return { token, user };
+        },
+        addLoves: async (parent, { userId, loves }, context) => {
+            if (context.user) {
+              return User.findOneAndUpdate(
+                { _id: userId },
+                {
+                  $addToSet: { loves: loves },
+                },
+                {
+                  new: true,
+                  runValidators: true,
+                }
+              );
+            }
+        },
+        addFriends: async (parent, { userId, friends }, context) => {
+            if (context.user) {
+              return User.findOneAndUpdate(
+                { _id: userId },
+                {
+                  $addToSet: { friends: friends },
+                },
+                {
+                  new: true,
+                  runValidators: true,
+                }
+              );
+            }
         }
     }
 }
