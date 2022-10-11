@@ -22,8 +22,8 @@ query me {
     }
 }
 `;
-export const QUERY_USER = gql `
-query user {
+export const QUERY_USERS = gql `
+query users {
     user {
         _id
         name
