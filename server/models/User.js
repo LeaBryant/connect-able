@@ -71,11 +71,11 @@ const userSchema = new Schema(
             maxlength: 500,
             required: true
         },
-        // selfIdentify: {
-        //     type: Boolean,
-        //     required: true,
-        //     possibleValues: ['yes', 'no']
-        // },
+        selfIdentify: {
+            type: Boolean,
+            required: true,
+            possibleValues: ['yes', 'no']
+        },
         disability: {
             type: String,
             maxlength: 500,
