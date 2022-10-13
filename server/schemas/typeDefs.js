@@ -17,7 +17,7 @@ const typeDefs = gql`
         interests: String
         disability: String
         loves: [User]
-        friends: [Users]
+        friends: [User]
     }
 
     type Auth {
@@ -33,8 +33,8 @@ const typeDefs = gql`
     type Mutation {
         login(email: String!, password: String!): Auth
         newUser(username: String!, email: String!, password: String!): Auth
-        addLoves(userID): Auth
-        addFriends(userID):Auth
+        addLoves(userID: ID!): Auth
+        addFriends(userID: ID!): Auth
     }
 `;
 
