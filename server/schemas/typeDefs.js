@@ -17,7 +17,7 @@ const typeDefs = gql`
         interests: String
         disability: String
         loves: [User]
-        friends: [Users]
+        friends: [User]
     }
 
     type Auth {
