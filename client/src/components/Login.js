@@ -43,17 +43,17 @@ const Login = () => {
   
   return (
     <form>
-      <div class="form-outline mb-4">
-        <input type="email" id="form2Example1" class="form-control" />
-        <label class="form-label" for="form2Example1">Email address</label>
+      <div className="form-outline mb-4">
+        <input type="email" id="form2Example1" className="form-control" />
+        <label className="form-label" htmlFor="form2Example1">Email address</label>
       </div>
 
-      <div class="form-outline mb-4">
-        <input type="password" id="form2Example2" class="form-control" />
-        <label class="form-label" for="form2Example2">Password</label>
+      <div className="form-outline mb-4">
+        <input type="password" id="form2Example2" className="form-control" />
+        <label className="form-label" htmlFor="form2Example2">Password</label>
       </div>
-      <button type="button" class="btn btn-primary btn-block mb-4">Sign in</button>
-      <div class="text-center">
+      <button type="button" className="btn btn-primary btn-block mb-4">Sign in</button>
+      <div className="text-center">
         <p>Not a member? <a href="/Signup">Register</a></p>
       </div>
     </form>
