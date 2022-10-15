@@ -1,62 +1,97 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Form, Button, Alert } from 'react-bootstrap';
+import { useMutation } from '@apollo/client';
 
-// import { Link } from 'react-router-dom';
-// import { useMutation } from '@apollo/client';
-// import { LOGIN_USER } from '../utils/mutations';
-// import Auth from '../utils/auth';
+// import { loginUser } from '../utils/API';
+import { LOGIN_USER } from '../utils/mutations';
+import Auth from '../utils/auth';
 
 const Login = () => {
-  // const [formState, setFormState] = useState({ email: '', password: '' });
-  // const [login, { error, data }] = useMutation(LOGIN_USER);
+  const [userFormData, setUserFormData] = useState({ email: '', password: '' });
+  const [validated] = useState(false);
+  const [showAlert, setShowAlert] = useState(false);
+  const [login, { error }] = useMutation(LOGIN_USER);
 
-  // // update state based on form input changes
-  // const handleChange = (event) => {
-  //   const { name, value } = event.target;
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setUserFormData({ ...userFormData, [name]: value });
+  };
 
-  //   setFormState({
-  //     ...formState,
-  //     [name]: value,
-  //   });
-  // };
+  // function that accepts the book's mongo _id value as param and deletes the book from the database
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
+    console.log(userFormData);
 
-  // // submit form
-  // const handleFormSubmit = async (event) => {
-  //   event.preventDefault();
-  //   console.log(formState);
-  //   try {
-  //     const { data } = await login({
-  //       variables: { ...formState },
-  //     });
+    // check if form has everything (as per react-bootstrap docs)
+    const form = event.currentTarget;
+    if (form.checkValidity() === false) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
 
-  //     Auth.login(data.login.token);
-  //   } catch (e) {
-  //     console.error(e);
-  //   }
+    try {
+      const { data } = await login({
+        variables: { ...userFormData },
+      });
 
-  //   // clear form values
-  //   setFormState({
-  //     email: '',
-  //     password: '',
-  //   });
-  // };
-  
+      Auth.login(data.login.token);
+    } catch (err) {
+      console.error(err);
+      setShowAlert(true);
+    }
+
+    setUserFormData({
+      username: '',
+      email: '',
+      password: '',
+    });
+  };
+
   return (
-    <form>
-      <div className="form-outline mb-4">
-        <input type="email" id="form2Example1" className="form-control" />
-        <label className="form-label" htmlFor="form2Example1">Email address</label>
-      </div>
+    <>
+      <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
+        <Alert dismissible onClose={() => setShowAlert(false)} show={showAlert} variant='danger'>
+          Something went wrong with your login credentials!
+        </Alert>
+        <Form.Group>
+          <Form.Label htmlFor='email'>Email</Form.Label>
+          <Form.Control
+            type='text'
+            placeholder='Your email'
+            name='email'
+            onChange={handleInputChange}
+            value={userFormData.email}
+            required
+          />
+          <Form.Control.Feedback type='invalid'>Email is required!</Form.Control.Feedback>
+        </Form.Group>
 
-      <div className="form-outline mb-4">
-        <input type="password" id="form2Example2" className="form-control" />
-        <label className="form-label" htmlFor="form2Example2">Password</label>
-      </div>
-      <button type="button" className="btn btn-primary btn-block mb-4">Sign in</button>
-      <div className="text-center">
-        <p>Not a member? <a href="/Signup">Register</a></p>
-      </div>
-    </form>
+        <Form.Group>
+          <Form.Label htmlFor='password'>Password</Form.Label>
+          <Form.Control
+            type='password'
+            placeholder='Your password'
+            name='password'
+            onChange={handleInputChange}
+            value={userFormData.password}
+            required
+          />
+          <Form.Control.Feedback type='invalid'>Password is required!</Form.Control.Feedback>
+        </Form.Group>
+        <Button
+          disabled={!(userFormData.email && userFormData.password)}
+          type='submit'
+          variant='success'>
+          Submit
+        </Button>
+        <Button
+          disabled={!(userFormData.email && userFormData.password)}
+          type='submit'
+          variant='success'>
+          Not a Member? Register Now
+        </Button>
+      </Form>
+    </>
   );
 };
 
