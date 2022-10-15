@@ -49,7 +49,6 @@ mutation newUser (
         }
       }
   }
-}
 `;
 
 export const LOGIN_USER = gql`
@@ -64,22 +63,22 @@ export const LOGIN_USER = gql`
   }
 `;
 
-export const ADD_LOVES = gql`
-  mutation addLoves($userID: ID!) {
-    addLoves(userID: $ID!) {
-      _id
-      name
-      loves
-    }
-  }
-`;
+// export const ADD_LOVES = gql`
+//   mutation addLoves($userID: ID!) {
+//     addLoves(userID: $ID!) {
+//       _id
+//       name
+//       loves
+//     }
+//   }
+// `;
 
-export const ADD_FRIENDS = gql`
-  mutation addFriends($userID: ID!) {
-    addFriends(userID: $ID!) {
-      _id
-      name
-      friends
-    }
-  }
-`;
+// export const ADD_FRIENDS = gql`
+//   mutation addFriends($userID: ID!) {
+//     addFriends(userID: $ID!) {
+//       _id
+//       name
+//       friends
+//     }
+//   }
+// `;
