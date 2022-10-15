@@ -87,6 +87,18 @@ const Signup = () => {
         <Alert dismissible onClose={() => setShowAlert(false)} show={showAlert} variant='danger'>
           Something went wrong with your signup!
         </Alert>
+        <Form.Group>
+          <Form.Label htmlFor='name'>Name:</Form.Label>
+          <Form.Control
+            type='text'
+            placeholder='Your Name'
+            name='name'
+            onChange={handleInputChange}
+            value={userFormData.name}
+            required
+          />
+          <Form.Control.Feedback type='invalid'>Name is required!</Form.Control.Feedback>
+        </Form.Group>
 
         <Form.Group>
           <Form.Label htmlFor='username'>Username</Form.Label>
@@ -126,6 +138,197 @@ const Signup = () => {
           />
           <Form.Control.Feedback type='invalid'>Password is required!</Form.Control.Feedback>
         </Form.Group>
+
+        <Form.Group>
+          <Form.Label htmlFor='lookingForLove'>Are you Looking for Love?</Form.Label>
+          {['radio'].map((type) => (
+        <div key={`inline-${type}`} className="mb-3">
+          <Form.Check
+            inline
+            label="Yes"
+            name="group1"
+            type={type}
+            id={`inline-${type}-1`}
+          />
+          <Form.Check
+            inline
+            label="No"
+            name="group1"
+            type={type}
+            id={`inline-${type}-2`}
+          />
+        </div>
+      ))}
+         <Form.Control.Feedback type='invalid'>Looking for Love is required!</Form.Control.Feedback>
+        </Form.Group>
+
+        <Form.Group>
+          <Form.Label htmlFor='lookingForFriends'>Are you Looking for Friends?</Form.Label>
+          {['radio'].map((type) => (
+        <div key={`inline-${type}`} className="mb-3">
+          <Form.Check
+            inline
+            label="Yes"
+            name="group1"
+            type={type}
+            id={`inline-${type}-1`}
+          />
+          <Form.Check
+            inline
+            label="No"
+            name="group1"
+            type={type}
+            id={`inline-${type}-2`}
+          />
+        </div>
+      ))}
+         <Form.Control.Feedback type='invalid'>Looking for Friends is required!</Form.Control.Feedback>
+        </Form.Group>
+
+        <Form.Group>
+          <Form.Label htmlFor='DOB'>Date of Birth</Form.Label>
+          <Form.Control
+            type='DOB'
+            placeholder='mm/dd/yyyy'
+            name='DOB'
+            onChange={handleInputChange}
+            value={userFormData.DOB}
+            required
+          />
+          <Form.Control.Feedback type='invalid'>Date of Birth is required!</Form.Control.Feedback>
+        </Form.Group>
+
+        <Form.Group>
+        <Form.Label htmlFor='gender'>What is your Gender?</Form.Label>
+          {['radio'].map((type) => (
+        <div key={`inline-${type}`} className="mb-3">
+          <Form.Check
+            inline
+            label="Man"
+            name="group1"
+            type={type}
+            id={`inline-${type}-1`}
+          />
+          <Form.Check
+            inline
+            label="Woman"
+            name="group1"
+            type={type}
+            id={`inline-${type}-2`}
+          />
+          <Form.Check
+            inline
+            label="Non-binary/non-conforming"
+            name="group1"
+            type={type}
+            id={`inline-${type}-2`}
+          />
+          <Form.Check
+            inline
+            label="Transgender"
+            name="group1"
+            type={type}
+            id={`inline-${type}-2`}
+          />
+          <Form.Check
+            inline
+            label="Prefer not to respond"
+            name="group1"
+            type={type}
+            id={`inline-${type}-2`}
+          />
+        </div>
+      ))}
+         <Form.Control.Feedback type='invalid'>Gender is required!</Form.Control.Feedback>
+      </Form.Group>
+
+      <Form.Group>
+          <Form.Label htmlFor='orientation'>Orientation</Form.Label>
+          <Form.Control
+            type='orientation'
+            placeholder='orientation'
+            name='orientation'
+            onChange={handleInputChange}
+            value={userFormData.orientation}
+            required
+          />
+          <Form.Control.Feedback type='invalid'>Orientation is required!</Form.Control.Feedback>
+        </Form.Group>
+
+        <Form.Group>
+          <Form.Label htmlFor='location'>Where do you live?</Form.Label>
+          <Form.Control
+            type='location'
+            placeholder='City, State'
+            name='location'
+            onChange={handleInputChange}
+            value={userFormData.location}
+            required
+          />
+          <Form.Control.Feedback type='invalid'>Location is required!</Form.Control.Feedback>
+        </Form.Group>
+
+        <Form.Group>
+          <Form.Label htmlFor='aboutMe'>Tell us About Yourself!</Form.Label>
+          <Form.Control
+            type='aboutMe'
+            placeholder='About Me'
+            name='aboutMe'
+            onChange={handleInputChange}
+            value={userFormData.aboutMe}
+            required
+          />
+          <Form.Control.Feedback type='invalid'>About Me is required!</Form.Control.Feedback>
+        </Form.Group>
+
+        <Form.Group>
+          <Form.Label htmlFor='interests'>Tell us about your interests!</Form.Label>
+          <Form.Control
+            type='interests'
+            placeholder='interests'
+            name='interests'
+            onChange={handleInputChange}
+            value={userFormData.interests}
+            required
+          />
+          <Form.Control.Feedback type='invalid'>Interests are required!</Form.Control.Feedback>
+        </Form.Group>
+
+        <Form.Group>
+          <Form.Label htmlFor='selfIdentify'>Do you want to identify your impairment?</Form.Label>
+          {['radio'].map((type) => (
+        <div key={`inline-${type}`} className="mb-3">
+          <Form.Check
+            inline
+            label="Yes"
+            name="group1"
+            type={type}
+            id={`inline-${type}-1`}
+          />
+          <Form.Check
+            inline
+            label="No"
+            name="group1"
+            type={type}
+            id={`inline-${type}-2`}
+          />
+        </div>
+      ))}
+         <Form.Control.Feedback type='invalid'>You must answer yes or no to identifying your impairment!</Form.Control.Feedback>
+        </Form.Group>
+
+        {/* <Form.Group>
+          <Form.Label htmlFor='disability'>Tell us about your interests!</Form.Label>
+          <Form.Control
+            type='disability'
+            placeholder='disability'
+            name='disability'
+            onChange={handleInputChange}
+            value={userFormData.interests}
+            required
+          />
+        </Form.Group> */}
+
         <Button
           disabled={!(userFormData.username && userFormData.email && userFormData.password)}
           type='submit'
