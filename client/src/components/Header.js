@@ -1,14 +1,15 @@
 import React from 'react';
-// import logo from '../images/logo.png'
+import 'bootstrap/dist/css/bootstrap.css';
+
 const Header = () => {
   return (
-    <div>
-<h2 class="ui teal image header">
-<img class="ui fluid image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/EasternGraySquirrel_GAm.jpg/1024px-EasternGraySquirrel_GAm.jpg">
-</img>
-    
-    </h2>
+  <div class='container'>
+    <div class='jumbotron'>
+      <div class="text-center">
+        <img alt='Logo' src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/EasternGraySquirrel_GAm.jpg/1024px-EasternGraySquirrel_GAm.jpg"></img>
+      </div>
     </div>
+  </div>
   );
 };
 

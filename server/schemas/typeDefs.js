@@ -7,14 +7,15 @@ const typeDefs = gql`
         email: String
         password: String
         username: String
-        lookingForLove: String
-        lookingForFriends: String
+        lookingForLove: Boolean
+        lookingForFriends: Boolean
         DOB: String
         gender: String
         orientation: String
         location: String
         aboutMe: String
         interests: String
+        selfIdentify: Boolean
         disability: String
         loves: [User]
         friends: [User]
@@ -35,6 +36,7 @@ const typeDefs = gql`
         newUser(
             username: String!, 
             email: String!, 
+            name: String!,
             password: String!, 
             lookingForLove: Boolean!, 
             lookingForFriends: Boolean!,
@@ -44,6 +46,7 @@ const typeDefs = gql`
             location: String!,
             aboutMe: String!,
             interests: String!,
+            selfIdentify: Boolean!,
             disability: String!
         ): Auth
     }

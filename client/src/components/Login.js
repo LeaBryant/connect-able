@@ -1,4 +1,5 @@
 import React from 'react';
+import { Form, Button, Alert } from 'react-bootstrap';
 
 // import { Link } from 'react-router-dom';
 // import { useMutation } from '@apollo/client';
@@ -41,38 +42,21 @@ const Login = () => {
   // };
   
   return (
-    <div class="ui placeholder segment">
-  <div class="ui two column very relaxed stackable grid">
-    <div class="column">
-      <div class="ui form">
-        <div class="field">
-          <label>Username</label>
-          <div class="ui left icon input">
-            <input type="text" placeholder="Username"></input>
-            <i class="user icon"></i>
-          </div>
-        </div>
-        <div class="field">
-          <label>Password</label>
-          <div class="ui left icon input">
-            <input type="password"></input>
-            <i class="lock icon"></i>
-          </div>
-        </div>
-        <div class="ui blue submit button">Login</div>
+    <form>
+      <div class="form-outline mb-4">
+        <input type="email" id="form2Example1" class="form-control" />
+        <label class="form-label" for="form2Example1">Email address</label>
       </div>
-    </div>
-    <div class="middle aligned column">
-      <div class="ui big button">
-        <i class="signup icon"></i>
-        Sign Up
+
+      <div class="form-outline mb-4">
+        <input type="password" id="form2Example2" class="form-control" />
+        <label class="form-label" for="form2Example2">Password</label>
       </div>
-    </div>
-  </div>
-  <div class="ui vertical divider">
-    Or
-  </div>
-</div>
+      <button type="button" class="btn btn-primary btn-block mb-4">Sign in</button>
+      <div class="text-center">
+        <p>Not a member? <a href="/Signup">Register</a></p>
+      </div>
+    </form>
   );
 };
 
