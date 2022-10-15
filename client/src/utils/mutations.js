@@ -1,15 +1,55 @@
 import { gql } from '@apollo/client';
 
 export const NEW_USER = gql`
-  mutation newUser($username: String!, $email: String!, $password: String!) {
-    newUser(name: $name, email: $email, password: $password) {
-      token
-        User {
-        _id
-        name
+mutation newUser (
+  $name: String!, 
+  $email: String!, 
+  $password: String!, 
+  $username: String!, 
+  $lookingForLove: Boolean!, 
+  $lookingForFriends: Boolean!, 
+  $dob: String!, 
+  $gender: String!, 
+  $orientation: String!, 
+  $location: String!, 
+  $aboutMe: String!, 
+  $interests: String!, 
+  $disability: String!)
+  {
+    newUser(
+      username: $username, 
+      lookingForLove: $lookingForLove, 
+      lookingForFriends: $lookingForFriends, 
+      DOB: $dob, 
+      gender: $gender, 
+      orientation: $orientation, 
+      location: $location, 
+      aboutMe: $aboutMe, 
+      interests: $interests, 
+      disability: $disability
+      )
+      {
+        token
+        User 
+        {
+          _id
+          name
+          email
+          password
+          username
+          lookingForLove
+          lookingForFriends
+          DOB
+          gender
+          orientation
+          location
+          aboutMe
+          interests
+          disability
+        }
       }
-    }
   }
+}
 `;
 
 export const LOGIN_USER = gql`
