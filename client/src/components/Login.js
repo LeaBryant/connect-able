@@ -78,18 +78,22 @@ const Login = () => {
           />
           <Form.Control.Feedback type='invalid'>Password is required!</Form.Control.Feedback>
         </Form.Group>
+        <Form.Group>
         <Button
           disabled={!(userFormData.email && userFormData.password)}
           type='submit'
           variant='success'>
           Submit
         </Button>
+        </Form.Group>
+        <Form.Group>
         <Button
           disabled={!(userFormData.email && userFormData.password)}
           type='submit'
           variant='success'>
           Not a Member? Register Now
         </Button>
+        </Form.Group>
       </Form>
     </>
   );
