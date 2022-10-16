@@ -142,7 +142,7 @@ const Signup = () => {
         <Form.Group>
           <Form.Label htmlFor='lookingForLove'>Are you Looking for Love?</Form.Label>
           {['radio'].map((type) => (
-        <div key={`inline-${type}`} className="mb-3">
+          <div key={`inline-${type}`} className="mb-3">
           <Form.Check
             inline
             label="Yes"
