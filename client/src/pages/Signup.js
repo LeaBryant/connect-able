@@ -140,49 +140,29 @@ const Signup = () => {
         </Form.Group>
 
         <Form.Group>
-          <Form.Label htmlFor='lookingForLove'>Are you Looking for Love?</Form.Label>
-          {['radio'].map((type) => (
-        <div key={`inline-${type}`} className="mb-3">
-          <Form.Check
-            inline
-            label="Yes"
-            name="group1"
-            type={type}
-            id={`inline-${type}-1`}
+          <Form.Label htmlFor='lookingForLove'>Are you looking for love?</Form.Label>
+          <Form.Control
+            type='lookingForLove'
+            placeholder='Yes or No'
+            name='lookingForLove'
+            onChange={handleInputChange}
+            value={userFormData.lookingForLove}
+            required
           />
-          <Form.Check
-            inline
-            label="No"
-            name="group1"
-            type={type}
-            id={`inline-${type}-2`}
-          />
-        </div>
-      ))}
-         <Form.Control.Feedback type='invalid'>Looking for Love is required!</Form.Control.Feedback>
+          <Form.Control.Feedback type='invalid'>Looking for love is required!</Form.Control.Feedback>
         </Form.Group>
 
         <Form.Group>
-          <Form.Label htmlFor='lookingForFriends'>Are you Looking for Friends?</Form.Label>
-          {['radio'].map((type) => (
-        <div key={`inline-${type}`} className="mb-3">
-          <Form.Check
-            inline
-            label="Yes"
-            name="group2"
-            type={type}
-            id={`inline-${type}-1`}
+          <Form.Label htmlFor='lookingForFriends'>Are you looking for friends?</Form.Label>
+          <Form.Control
+            type='lookingForFriends'
+            placeholder='Yes or No'
+            name='lookingForFriends'
+            onChange={handleInputChange}
+            value={userFormData.lookingForFriends}
+            required
           />
-          <Form.Check
-            inline
-            label="No"
-            name="group2"
-            type={type}
-            id={`inline-${type}-2`}
-          />
-        </div>
-      ))}
-         <Form.Control.Feedback type='invalid'>Looking for Friends is required!</Form.Control.Feedback>
+          <Form.Control.Feedback type='invalid'>Looking for friends is required!</Form.Control.Feedback>
         </Form.Group>
 
         <Form.Group>
@@ -199,48 +179,17 @@ const Signup = () => {
         </Form.Group>
 
         <Form.Group>
-        <Form.Label htmlFor='gender'>What is your Gender?</Form.Label>
-          {['radio'].map((type) => (
-        <div key={`inline-${type}`} className="mb-3">
-          <Form.Check
-            inline
-            label="Man"
-            name="group3"
-            type={type}
-            id={`inline-${type}-1`}
+          <Form.Label htmlFor='gender'>What is your gender?</Form.Label>
+          <Form.Control
+            type='gender'
+            placeholder='Male, Female, Non-binary, Prefer not to respond'
+            name='gender'
+            onChange={handleInputChange}
+            value={userFormData.gender}
+            required
           />
-          <Form.Check
-            inline
-            label="Woman"
-            name="group3"
-            type={type}
-            id={`inline-${type}-2`}
-          />
-          <Form.Check
-            inline
-            label="Non-binary/non-conforming"
-            name="group3"
-            type={type}
-            id={`inline-${type}-2`}
-          />
-          <Form.Check
-            inline
-            label="Transgender"
-            name="group3"
-            type={type}
-            id={`inline-${type}-2`}
-          />
-          <Form.Check
-            inline
-            label="Prefer not to respond"
-            name="group3"
-            type={type}
-            id={`inline-${type}-2`}
-          />
-        </div>
-      ))}
-         <Form.Control.Feedback type='invalid'>Gender is required!</Form.Control.Feedback>
-      </Form.Group>
+          <Form.Control.Feedback type='invalid'>Gender is required!</Form.Control.Feedback>
+        </Form.Group>
 
       <Form.Group>
           <Form.Label htmlFor='orientation'>Orientation</Form.Label>
@@ -295,42 +244,31 @@ const Signup = () => {
         </Form.Group>
 
         <Form.Group>
-          <Form.Label htmlFor='selfIdentify'>Do you want to identify your impairment?</Form.Label>
-          {['radio'].map((type) => (
-        <div key={`inline-${type}`} className="mb-3">
-          <Form.Check
-            inline
-            label="Yes"
-            name="group4"
-            type={type}
-            id={`inline-${type}-1`}
+          <Form.Label htmlFor='selfIdentify'>Do you wish to self identify your disabilities?</Form.Label>
+          <Form.Control
+            type='selfIdentify'
+            placeholder='Yes or No'
+            name='selfIdentify'
+            onChange={handleInputChange}
+            value={userFormData.selfIdentify}
+            required
           />
-          <Form.Check
-            inline
-            label="No"
-            name="group4"
-            type={type}
-            id={`inline-${type}-2`}
-          />
-        </div>
-      ))}
-         <Form.Control.Feedback type='invalid'>You must answer yes or no to identifying your impairment!</Form.Control.Feedback>
+          <Form.Control.Feedback type='invalid'>A response to self identify is required!</Form.Control.Feedback>
         </Form.Group>
 
-        {/* <Form.Group>
-          <Form.Label htmlFor='disability'>Tell us about your interests!</Form.Label>
+        <Form.Group>
+          <Form.Label htmlFor='disability'>Disclose your disability if you wish</Form.Label>
           <Form.Control
             type='disability'
             placeholder='disability'
             name='disability'
             onChange={handleInputChange}
-            value={userFormData.interests}
-            required
+            value={userFormData.disability}
           />
-        </Form.Group> */}
+        </Form.Group>
 
         <Button
-          disabled={!(userFormData.username && userFormData.email && userFormData.password)}
+          disabled={!(userFormData.name && userFormData.username && userFormData.email && userFormData.password && userFormData.lookingForLove && userFormData.lookingForFriends && userFormData.DOB && userFormData.gender && userFormData.orientation && userFormData.location && userFormData.aboutMe && userFormData.interests && userFormData.selfIdentify && userFormData.disability)}
           type='submit'
           variant='success'>
           Submit
