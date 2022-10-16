@@ -1,13 +1,33 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
-import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
+import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink } from '@apollo/client';
+import { setContext } from '@apollo/client/link/context';
 import Home from './pages/Home';
 import Profile from './pages/Profile';
 import Signup from './pages/Signup';
 
-const client = new ApolloClient({
+// const client = new ApolloClient({
+//   uri: '/graphql',
+//   cache: new InMemoryCache(),
+// });
+const httpLink = createHttpLink({
   uri: '/graphql',
+});
+
+const authLink = setContext((_, { headers }) => {
+  const token = localStorage.getItem('id_token');
+  return {
+    headers: {
+      ...headers,
+      authorization: token ? `Bearer ${token}` : '',
+    },
+  };
+});
+
+const client = new ApolloClient({
+  // Set up our client to execute the `authLink` middleware prior to making the request to our GraphQL API
+  link: authLink.concat(httpLink),
   cache: new InMemoryCache(),
 });
 
