@@ -1,16 +1,19 @@
 import React from 'react';
 
-import Header from '../components/Header'
+import Nav from '../components/Nav'
 import Footer from '../components/Footer'
+import '../style.css'
 
 
 const Profile = () => {
   return (
+    <body>
     <div>
-      <Header />
+      <Nav />
       <div>hello</div>
       <Footer />
     </div>
+    </body>
   );
 };
 
