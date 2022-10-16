@@ -127,10 +127,10 @@ const Signup = () => {
         </Form.Group>
 
         <Form.Group>
-          <Form.Label htmlFor='password'>Password</Form.Label>
+          <Form.Label htmlFor='password'>Your Password</Form.Label>
           <Form.Control
             type='password'
-            placeholder='Your password'
+            placeholder='Minimum of 8 Characters'
             name='password'
             onChange={handleInputChange}
             value={userFormData.password}
