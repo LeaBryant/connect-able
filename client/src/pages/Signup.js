@@ -169,14 +169,14 @@ const Signup = () => {
           <Form.Check
             inline
             label="Yes"
-            name="group1"
+            name="group2"
             type={type}
             id={`inline-${type}-1`}
           />
           <Form.Check
             inline
             label="No"
-            name="group1"
+            name="group2"
             type={type}
             id={`inline-${type}-2`}
           />
@@ -205,35 +205,35 @@ const Signup = () => {
           <Form.Check
             inline
             label="Man"
-            name="group1"
+            name="group3"
             type={type}
             id={`inline-${type}-1`}
           />
           <Form.Check
             inline
             label="Woman"
-            name="group1"
+            name="group3"
             type={type}
             id={`inline-${type}-2`}
           />
           <Form.Check
             inline
             label="Non-binary/non-conforming"
-            name="group1"
+            name="group3"
             type={type}
             id={`inline-${type}-2`}
           />
           <Form.Check
             inline
             label="Transgender"
-            name="group1"
+            name="group3"
             type={type}
             id={`inline-${type}-2`}
           />
           <Form.Check
             inline
             label="Prefer not to respond"
-            name="group1"
+            name="group3"
             type={type}
             id={`inline-${type}-2`}
           />
@@ -301,14 +301,14 @@ const Signup = () => {
           <Form.Check
             inline
             label="Yes"
-            name="group1"
+            name="group4"
             type={type}
             id={`inline-${type}-1`}
           />
           <Form.Check
             inline
             label="No"
-            name="group1"
+            name="group4"
             type={type}
             id={`inline-${type}-2`}
           />
