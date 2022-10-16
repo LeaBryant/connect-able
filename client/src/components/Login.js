@@ -47,13 +47,25 @@ const Login = () => {
     });
   };
 
+  const mystyle = {
+    color: "white",
+    padding: "10px",
+    fontFamily: "Arial"
+  };
+  const button = {
+    color: "white",
+    backgroundColor: "Gray",
+    padding: "10px",
+    fontFamily: "Arial"
+  };
+
   return (
     <>
       <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
         <Alert dismissible onClose={() => setShowAlert(false)} show={showAlert} variant='danger'>
           Something went wrong with your login credentials!
         </Alert>
-        <Form.Group>
+        <Form.Group style={mystyle}>
           <Form.Label htmlFor='email'>Email</Form.Label>
           <Form.Control
             type='text'
@@ -66,7 +78,7 @@ const Login = () => {
           <Form.Control.Feedback type='invalid'>Email is required!</Form.Control.Feedback>
         </Form.Group>
 
-        <Form.Group>
+        <Form.Group style={mystyle}>
           <Form.Label htmlFor='password'>Password</Form.Label>
           <Form.Control
             type='password'
@@ -78,16 +90,19 @@ const Login = () => {
           />
           <Form.Control.Feedback type='invalid'>Password is required!</Form.Control.Feedback>
         </Form.Group>
-        <Form.Group>
+        <Form.Group style={mystyle}>
         <Button
+          style={button}
           disabled={!(userFormData.email && userFormData.password)}
           type='submit'
           variant='success'>
           Submit
         </Button>
         </Form.Group>
-        <Form.Group>
+
+        <Form.Group style={mystyle} >
         <Button
+          style={button}
           disabled={!(userFormData.email && userFormData.password)}
           type='submit'
           variant='success'>
