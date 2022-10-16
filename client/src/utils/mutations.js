@@ -30,7 +30,7 @@ mutation newUser (
       )
       {
         token
-        User 
+        user 
         {
           _id
           name
