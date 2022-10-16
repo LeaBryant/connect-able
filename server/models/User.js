@@ -25,14 +25,14 @@ const userSchema = new Schema(
             unique: true
         },
         lookingForLove: {
-            type: Boolean,
+            type: String,
             required: true,
-            possibleValues: ['yes', 'no']
+            // possibleValues: ['yes', 'no']
         },
         lookingForFriends: {
-            type: Boolean,
+            type: String,
             required: true,
-            possibleValues: ['yes', 'no']
+            // possibleValues: ['yes', 'no']
         },
         // lookingforcommunity: {
         //     type: Boolean,
@@ -47,7 +47,7 @@ const userSchema = new Schema(
         gender: {
             type: String,
             required: true,
-            possibleValues: ['Woman', 'Man', 'Transgender', 'Non-binary/non-conforming', 'Prefer not to respond']
+            // possibleValues: ['Woman', 'Man', 'Transgender', 'Non-binary/non-conforming', 'Prefer not to respond']
         },
         orientation: {
             type: String,
@@ -72,9 +72,9 @@ const userSchema = new Schema(
             required: true
         },
         selfIdentify: {
-            type: Boolean,
+            type: String,
             required: true,
-            possibleValues: ['yes', 'no']
+            // possibleValues: ['yes', 'no']
         },
         disability: {
             type: String,
