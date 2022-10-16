@@ -5,7 +5,7 @@ import { useMutation } from '@apollo/client';
 import { NEW_USER } from '../utils/mutations';
 
 import Auth from '../utils/auth';
-
+import '../style.css'
 
 const Signup = () => {
   // set initial form state
@@ -78,16 +78,25 @@ const Signup = () => {
         disability: ''
     });
   };
+  const mystyle = {
+    color: "white",
+    padding: "10px",
+    fontFamily: "Arial",
+    background: "gray",
+  };
 
+  
   return (
     <>
+    <div style={mystyle}>
+
       {/* This is needed for the validation functionality above */}
       <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
         {/* show alert if server response is bad */}
         <Alert dismissible onClose={() => setShowAlert(false)} show={showAlert} variant='danger'>
           Something went wrong with your signup!
         </Alert>
-        <Form.Group>
+        <Form.Group >
           <Form.Label htmlFor='name'>Name:</Form.Label>
           <Form.Control
             type='text'
@@ -100,7 +109,7 @@ const Signup = () => {
           <Form.Control.Feedback type='invalid'>Name is required!</Form.Control.Feedback>
         </Form.Group>
 
-        <Form.Group>
+        <Form.Group >
           <Form.Label htmlFor='username'>Username</Form.Label>
           <Form.Control
             type='text'
@@ -336,6 +345,7 @@ const Signup = () => {
           Submit
         </Button>
       </Form>
+      </div>
     </>
   );
 };

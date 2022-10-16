@@ -1,0 +1,15 @@
+.test {
+    background-color:rgb(3, 3, 3);
+}
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body, .jumbotron {
+    background-color: #282c34;
+    color: white;
+    padding: 40px;
+    font-family: Arial;
+    text-align: center;
+  }
