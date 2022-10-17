@@ -23,8 +23,8 @@ const resolvers = {
             const token = signToken(user);
             return { token, user };
         },
-        login: async (parent, args) => {
-            const user = await User.find(args.email);
+        login: async (parent, { email, password }) => {
+            const user = await User.findOne({ email });
             if (!user){
                 throw new AuthenticationError('Wrong Credentials');
             }
@@ -34,7 +34,7 @@ const resolvers = {
               }
               const token = signToken(user);
               return { token, user };
-        },
+        }
         // addLoves: async (parent, { userId, loves }, context) => {
         //     if (context.user) {
         //       return User.findOneAndUpdate(

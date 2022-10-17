@@ -50,6 +50,7 @@ mutation newUser (
           location
           aboutMe
           interests
+          selfIdentify
           disability
         }
       }
@@ -60,9 +61,9 @@ export const LOGIN_USER = gql`
   mutation login($email: String!, $password: String!) {
     login(email: $email, password: $password) {
       token
-        User {
+        user {
         _id
-        name
+        email
       }
     }
   }
