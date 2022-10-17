@@ -41,7 +41,6 @@ const Login = () => {
     }
 
     setUserFormData({
-      username: '',
       email: '',
       password: '',
     });
