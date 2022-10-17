@@ -7,11 +7,17 @@ import '../style.css'
 
 const Profile = () => {
   return (
+  <body>
+    <div>
+      <Nav />
+      </div>
   
+
      
     <div>
       <Footer />
     </div>
+  </body>
   );
 };
 
