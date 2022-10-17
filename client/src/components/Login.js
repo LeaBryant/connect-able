@@ -48,12 +48,13 @@ const Login = () => {
   };
 
   const mystyle = {
-    color: "white",
+    color: "black",
     padding: "10px",
     fontFamily: "Arial"
+    
   };
   const button = {
-    color: "white",
+    color: "black",
     backgroundColor: "Gray",
     padding: "10px",
     fontFamily: "Arial"
@@ -81,6 +82,7 @@ const Login = () => {
         <Form.Group style={mystyle}>
           <Form.Label htmlFor='password'>Password</Form.Label>
           <Form.Control
+          
             type='password'
             placeholder='Your password'
             name='password'
