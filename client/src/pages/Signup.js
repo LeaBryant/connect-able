@@ -90,7 +90,7 @@ const Signup = () => {
   
   return (
     <>
-     <body>
+  <div className="body">
      <div>
       <Header />
       </div>
@@ -296,7 +296,7 @@ const Signup = () => {
       <div>
       <Footer />
     </div>
-    </body>
+    </div>
     </>
   );
 };

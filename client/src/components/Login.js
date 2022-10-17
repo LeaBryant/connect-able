@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
-import { Form, Button, Alert } from 'react-bootstrap';
+import { Form, Alert } from 'react-bootstrap';
 import { useMutation } from '@apollo/client';
+import Button from 'react-bootstrap/Button';
 
 // import { loginUser } from '../utils/API';
 import { LOGIN_USER } from '../utils/mutations';
 import Auth from '../utils/auth';
+
 
 const Login = () => {
   const [userFormData, setUserFormData] = useState({ email: '', password: '' });
@@ -89,17 +91,19 @@ const Login = () => {
           className='Button'          
           disabled={!(userFormData.email && userFormData.password)}
           type='submit'
-          variant='success'>
+          variant='success'
+          href="profile"
+       >
           Submit
         </Button>
         </Form.Group>
-
         <Form.Group style={mystyle} >
         <Button
           className='Button'
-          disabled={!(userFormData.email && userFormData.password)}
-          type='submit'
-          variant='success'>
+          type='button'
+          variant='link'
+          href="signup"
+          >
           Not a Member? Register Now
         </Button>
         </Form.Group>

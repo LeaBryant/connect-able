@@ -8,13 +8,13 @@ import '../style.css'
 
 const Home = () => {
   return (
-    <body>
+    <div className="body">
     <div>
       <Header />
       <Login />
       <Footer />
     </div>
-    </body>
+    </div>
   );
 };
 
