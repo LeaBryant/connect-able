@@ -53,12 +53,6 @@ const Login = () => {
     fontFamily: "Arial"
     
   };
-  const button = {
-    color: "black",
-    backgroundColor: "Gray",
-    padding: "10px",
-    fontFamily: "Arial"
-  };
 
   return (
     <>
@@ -94,7 +88,7 @@ const Login = () => {
         </Form.Group>
         <Form.Group style={mystyle}>
         <Button
-          style={button}
+          className='Button'          
           disabled={!(userFormData.email && userFormData.password)}
           type='submit'
           variant='success'>
@@ -104,7 +98,7 @@ const Login = () => {
 
         <Form.Group style={mystyle} >
         <Button
-          style={button}
+          className='Button'
           disabled={!(userFormData.email && userFormData.password)}
           type='submit'
           variant='success'>
