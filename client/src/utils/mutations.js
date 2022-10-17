@@ -8,24 +8,29 @@ mutation newUser (
   $username: String!, 
   $lookingForLove: String!, 
   $lookingForFriends: String!, 
-  $dob: String!, 
+  $DOB: String!, 
   $gender: String!, 
   $orientation: String!, 
   $location: String!, 
   $aboutMe: String!, 
-  $interests: String!, 
+  $interests: String!,
+  $selfIdentify: String!
   $disability: String!)
   {
     newUser(
+      name: $name,
+      email: $email,
+      password: $password,
       username: $username, 
       lookingForLove: $lookingForLove, 
       lookingForFriends: $lookingForFriends, 
-      DOB: $dob, 
+      DOB: $DOB, 
       gender: $gender, 
       orientation: $orientation, 
       location: $location, 
       aboutMe: $aboutMe, 
-      interests: $interests, 
+      interests: $interests,
+      selfIdentify: $selfIdentify,
       disability: $disability
       )
       {

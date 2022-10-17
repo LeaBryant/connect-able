@@ -1,9 +1,13 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
-import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink } from '@apollo/client';
+import {
+  ApolloClient,
+  InMemoryCache,
+  ApolloProvider,
+  createHttpLink,
+} from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
-
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import Home from './pages/Home';
 import Profile from './pages/Profile';
 import Signup from './pages/Signup';
