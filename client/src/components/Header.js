@@ -3,12 +3,10 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 const Header = () => {
   return (
-  <div className='container'>
-    <div className='jumbotron'>
+        <div className='jumbotron'>
       <div className="text-center">
         <img alt='Logo' src="https://live.staticflickr.com/65535/52429761369_8cbcb8efb6_m.jpg"></img>
       </div>
-    </div>
   </div>
   );
 };
