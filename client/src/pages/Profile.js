@@ -11,7 +11,20 @@ const Profile = () => {
     <div>
       <Nav />
       </div>
-  
+
+    
+  <div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-3 sidenav">
+      <h4>John's Blog</h4>
+      
+      </div>
+    </div>
+
+
+
+
+    </div>
 
      
     <div>

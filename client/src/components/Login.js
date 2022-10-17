@@ -51,8 +51,7 @@ const Login = () => {
     color: "black",
     padding: "10px",
     fontFamily: "Arial"
-    
-  };
+    };
 
   return (
     <>
