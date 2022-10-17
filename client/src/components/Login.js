@@ -50,8 +50,9 @@ const Login = () => {
 
   const mystyle = {
     color: "black",
-    padding: "10px",
-    fontFamily: "Arial"
+    padding: "5px",
+    fontFamily: "Arial",
+    alignItems: "center"
     };
 
   return (
@@ -69,12 +70,15 @@ const Login = () => {
             onChange={handleInputChange}
             value={userFormData.email}
             required
+            style={{ width: '35%'}} 
+            
           />
           <Form.Control.Feedback type='invalid'>Email is required!</Form.Control.Feedback>
         </Form.Group>
 
         <Form.Group style={mystyle}>
-          <Form.Label htmlFor='password'>Password</Form.Label>
+          <Form.Label htmlFor='password'>Password </Form.Label>
+         
           <Form.Control
           
             type='password'
@@ -83,8 +87,11 @@ const Login = () => {
             onChange={handleInputChange}
             value={userFormData.password}
             required
+            style={{ width: '35%'}} 
+
           />
           <Form.Control.Feedback type='invalid'>Password is required!</Form.Control.Feedback>
+         
         </Form.Group>
         <Form.Group style={mystyle}>
         <Button
