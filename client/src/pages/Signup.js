@@ -89,7 +89,7 @@ const Signup = () => {
   return (
     <>
     <div style={mystyle}>
-
+    
       {/* This is needed for the validation functionality above */}
       <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
         {/* show alert if server response is bad */}

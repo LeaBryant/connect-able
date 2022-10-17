@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
+
 import Home from './pages/Home';
 import Profile from './pages/Profile';
 import Signup from './pages/Signup';
@@ -12,7 +13,7 @@ import Signup from './pages/Signup';
 //   cache: new InMemoryCache(),
 // });
 const httpLink = createHttpLink({
-  uri: '/graphql',
+  uri: '/graphql'
 });
 
 const authLink = setContext((_, { headers }) => {
@@ -26,7 +27,7 @@ const authLink = setContext((_, { headers }) => {
 });
 
 const client = new ApolloClient({
-  // Set up our client to execute the `authLink` middleware prior to making the request to our GraphQL API
+  // Set up our client to execute the `authLink` middleware prior to making the request to our GraphQL AP
   link: authLink.concat(httpLink),
   cache: new InMemoryCache(),
 });
@@ -55,6 +56,5 @@ function App() {
     </ApolloProvider>
   );
 };
-
 
 export default App;
