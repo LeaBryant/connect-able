@@ -7,6 +7,8 @@ import { NEW_USER } from '../utils/mutations';
 import Auth from '../utils/auth';
 import '../style.css'
 
+import Header from '../components/Header'
+import Footer from '../components/Footer'
 const Signup = () => {
   // set initial form state
   const [userFormData, setUserFormData] = useState({ 
@@ -88,8 +90,13 @@ const Signup = () => {
   
   return (
     <>
-    <div style={mystyle}>
-    
+     <body>
+     <div>
+      <Header />
+      </div>
+  
+    <div className='container p-5 my-5 border' style={mystyle}>
+
       {/* This is needed for the validation functionality above */}
       <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
         {/* show alert if server response is bad */}
@@ -284,6 +291,11 @@ const Signup = () => {
         </Button>
       </Form>
       </div>
+     
+      <div>
+      <Footer />
+    </div>
+    </body>
     </>
   );
 };
