@@ -26,7 +26,7 @@ const Profile = () => {
       </div>
   <Container>
     <Row>
-  <Col sm={4}>
+  <Col sm={3}>
       <Card style={{ width: '18rem' }}>
       <Card.Img variant="top" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" />
       <Card.Body>
@@ -43,10 +43,9 @@ const Profile = () => {
     </Card>
     </Col>
 
-    <Col sm={8}>
-    <div class="container mt-4 mb-5">
+    <Col sm={9}>
     <div class="d-flex justify-content-center row">
-        <div class="col-md-8">
+        <div class="col-md-12">
             <div class="feed p-2">
                 <div class="d-flex flex-row justify-content-between align-items-center p-2 bg-white border">
                     <div class="feed-text px-2">
@@ -63,7 +62,7 @@ const Profile = () => {
                             <div class="feed-icon px-2"><i class="fa fa-ellipsis-v text-black-50"></i></div>
                         </div>
                     </div>
-                    <div class="p-2 px-3"><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></div>
+                    <div class="p-2 px-3"><span>Whoa crazy night last night!!😎 </span></div>
                     <div class="d-flex justify-content-end socials p-2 py-3"><i class="fa fa-thumbs-up"></i><i class="fa fa-comments-o"></i><i class="fa fa-share"></i></div>
                 </div>
                 <div class="bg-white border mt-2">
@@ -75,11 +74,10 @@ const Profile = () => {
                             <div class="feed-icon px-2"><i class="fa fa-ellipsis-v text-black-50"></i></div>
                         </div>
                     </div>
-                    <div class="feed-image p-2 px-3"><img class="img-fluid img-responsive" src="https://i.imgur.com/aoKusnD.jpg"/></div>
+                    <div class="feed-image p-2 px-3"><img class="img-fluid img-responsive" src="http://eyesimple.us/site/wp-content/uploads/2018/01/Call-Tech-Support-My-Mouse-Is-Dead-Funny-Technology-Meme-Image.jpg"/></div>
                     <div class="d-flex justify-content-end socials p-2 py-3"><i class="fa fa-thumbs-up"></i><i class="fa fa-comments-o"></i><i class="fa fa-share"></i></div>
                 </div>
             </div>
-        </div>
     </div>
 </div>
 </Col>
