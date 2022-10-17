@@ -81,11 +81,11 @@ const Signup = () => {
     });
   };
   const mystyle = {
-    color: "white",
+    color: "Black",
     padding: "10px",
     fontFamily: "Arial",
-    background: "gray",
-  };
+    background: '#ffffff' 
+   };
 
   
   return (
