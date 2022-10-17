@@ -287,7 +287,8 @@ const Signup = () => {
           className='Button'
           disabled={!(userFormData.name && userFormData.username && userFormData.email && userFormData.password && userFormData.lookingForLove && userFormData.lookingForFriends && userFormData.DOB && userFormData.gender && userFormData.orientation && userFormData.location && userFormData.aboutMe && userFormData.interests && userFormData.selfIdentify && userFormData.disability)}
           type='submit'
-          variant='success'>
+          variant='success'
+          href="profile">
           Submit
         </Button>
       </Form>
