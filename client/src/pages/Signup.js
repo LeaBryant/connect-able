@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Form, Button, Alert } from 'react-bootstrap';
+import { Form, Button, Alert, Link } from 'react-bootstrap';
 
 import { useMutation } from '@apollo/client';
 import { NEW_USER } from '../utils/mutations';
@@ -288,7 +288,7 @@ const Signup = () => {
           disabled={!(userFormData.name && userFormData.username && userFormData.email && userFormData.password && userFormData.lookingForLove && userFormData.lookingForFriends && userFormData.DOB && userFormData.gender && userFormData.orientation && userFormData.location && userFormData.aboutMe && userFormData.interests && userFormData.selfIdentify && userFormData.disability)}
           type='submit'
           variant='success'
-          href="profile">
+          Link='profile'>
           Submit
         </Button>
       </Form>

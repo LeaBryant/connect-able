@@ -12,7 +12,7 @@ const Nav = () => {
 <div style={mystyle}>
 <ul className="nav justify-content-end">
   <li className="nav-item">
-    <a className="nav-link" href="http://localhost:3000/">Logout</a>
+    <a className="nav-link" href="/Login">Logout</a>
   </li>
 </ul>
 </div>
