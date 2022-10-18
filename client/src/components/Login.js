@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Form, Alert } from 'react-bootstrap';
+import { Form, Alert,Link } from 'react-bootstrap';
 import { useMutation } from '@apollo/client';
 import Button from 'react-bootstrap/Button';
 
@@ -99,7 +99,7 @@ const Login = () => {
           disabled={!(userFormData.email && userFormData.password)}
           type='submit'
           variant='success'
-          href="profile"
+          Link="profile"
           
        >
           Submit
@@ -110,7 +110,7 @@ const Login = () => {
           className='Button'
           type='button'
           variant='link'
-          href="signup"
+          Link="signup" 
           >
           Not a Member? Register Now
         </Button>
