@@ -70,7 +70,7 @@ const Login = () => {
             onChange={handleInputChange}
             value={userFormData.email}
             required
-            style={{ width: '35%'}} 
+            style={{ width: '50%'}} 
             
           />
           <Form.Control.Feedback type='invalid'>Email is required!</Form.Control.Feedback>
@@ -87,7 +87,7 @@ const Login = () => {
             onChange={handleInputChange}
             value={userFormData.password}
             required
-            style={{ width: '35%'}} 
+            style={{ width: '50%'}} 
 
           />
           <Form.Control.Feedback type='invalid'>Password is required!</Form.Control.Feedback>
