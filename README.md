@@ -1,4 +1,7 @@
 # Connect-able
+<a href="connectable"><img src="https://img.shields.io/badge/-Connectable-purple"/></a>
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 
 # Purpose 
 This is app is designed for people of all disabilities. Giving them a platform to build relationships and a since or individual community. Many  disabled individuals find it hard to find love or just a common interest  group on social media platforms that do not cater to their unique needs. This social app is designed to enhance that social gap and create a sense of normalcy that is being lacked in the social community. This is not only a platform that can be accessed on website but is mobile friendly, along with screen readers, braille displays and screen magnifiers.
