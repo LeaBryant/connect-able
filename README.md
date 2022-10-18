@@ -21,12 +21,19 @@ User profile is where the user will be able to display a avatar or photo of them
 * Bootstrap
 
 # Snapshoot of Demo
+![Home page](/client/src/images/Home.png)
+
+![Sign up page](/client/src/images/Signup.png)
+
+![Profile Page](/client/src/images/Profilepage.png)
+
 
 # Team Venus Websites 
-* Github: 
-* Deployed: 
+* Github: https://github.com/LeaBryant/connect-able 
+* Deployed: https://intense-oasis-97749.herokuapp.com/
+
 
 # Contributors 
-- Lea Bryant, ldbryant3220@gmail.com
-- Tracy Rose Guajardo, tracyroseguajardo@gmail.com
-- Keli-Rene Sparks, krsparks2@yahoo.com
+- 🦄 Lea Bryant, ldbryant3220@gmail.com 
+- 🍑 Tracy Rose Guajardo, tracyroseguajardo@gmail.com 
+- 🐈‍⬛ Keli-Rene Sparks, krsparks2@yahoo.com
